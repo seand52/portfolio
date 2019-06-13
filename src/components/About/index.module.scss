@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.about_container {
+  margin-top: 190px;
+  background-color: linear-gradient(-45deg, #fff 10%, #d3d0d0);
+  position: relative;
+
+}
+
+.about_section {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 68%;
+}
+
+.skills_icons_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon {
+  font-size: 48px;
+  &_html {
+    color: #e5613c;
+  }
+  &_css {
+    color: #3178c7;
+  }
+  &_js {
+    color: #fae540;
+  }
+  &_react {
+    color: #61dafb;
+  }
+  &_vue {
+    color: #41b882;
+  }
+  &_db {
+    color: #f9ad01;
+  }
+}
+
+.shape {
+  height: 420px;
+  width: 420px;
+  background-color: red;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: -1;
+  transform: rotate(-14deg);
+  background-image: linear-gradient(135deg, #ffce75 10%, #ffbc42);
+}

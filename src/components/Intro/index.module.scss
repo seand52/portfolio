@@ -1,0 +1,53 @@
+.intro {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.foreground {
+  width: 60%;
+  margin: 160px auto 30px auto;
+  min-height: 200px;
+  z-index: 3;
+
+  &__description {
+    background: linear-gradient(135deg, #ffce75 10%, #ffbc42);
+    padding: 0.75rem 1rem 0.5rem;
+  }
+}
+
+.background {
+  width: 50%;
+}
+
+.background__shape {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(135deg, #ef2d73 10%, #d81159);
+  position: absolute;
+  top: -68px;
+  right: 7%;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+
+.icons_container {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  & svg {
+    font-size: 1.8rem;
+  }
+}
+
+.icon {
+  &_twitter {
+    color: #1da1f2;
+  }
+
+  &_linkedin {
+    color: #0277B5;
+  }
+}

@@ -48,17 +48,17 @@ class Layout extends React.Component<LayoutProps, {}> {
               >
                 <html lang="en" />
               </Helmet>
-              <Header siteTitle={siteMetadata.title} />
-              <div
+              <Header />
+              {/* <div
                 style={{
                   margin: '0 auto',
-                  maxWidth: 960,
+                  maxWidth: 1300,
                   padding: '0px 1.0875rem 1.45rem',
                   paddingTop: 0,
                 }}
-              >
-                {children}
-              </div>
+              > */}
+              {children}
+              {/* </div> */}
             </>
           );
         }}

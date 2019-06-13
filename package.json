@@ -13,23 +13,28 @@
     "ie >=9"
   ],
   "dependencies": {
-    "gatsby": "^2.0.45",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-favicon": "^3.1.4",
-    "gatsby-plugin-manifest": "^2.0.8",
-    "gatsby-plugin-netlify": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.13",
-    "gatsby-plugin-react-helmet": "^3.0.1",
-    "gatsby-plugin-sass": "^2.0.4",
-    "gatsby-plugin-sharp": "^2.0.12",
-    "gatsby-plugin-sitemap": "^2.0.2",
-    "gatsby-plugin-typescript": "^2.0.1",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-helmet": "^5.2.0",
-    "typescript": "^3.1.6"
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "gatsby": "*",
+    "gatsby-image": "*",
+    "gatsby-plugin-favicon": "*",
+    "gatsby-plugin-manifest": "*",
+    "gatsby-plugin-netlify": "*",
+    "gatsby-plugin-offline": "*",
+    "gatsby-plugin-react-helmet": "*",
+    "gatsby-plugin-sass": "*",
+    "gatsby-plugin-sharp": "*",
+    "gatsby-plugin-sitemap": "*",
+    "gatsby-plugin-typescript": "*",
+    "gatsby-source-filesystem": "*",
+    "gatsby-transformer-sharp": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-helmet": "*",
+    "react-spring": "*",
+    "typescript": "*"
   },
   "devDependencies": {
     "@types/react": "^16.4.18",
@@ -76,5 +81,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/leachjustin18/gatsby-typescript-boilerplate"
+  },
+  "resolutions": {
+    "@types/react": "16.7.18"
   }
 }

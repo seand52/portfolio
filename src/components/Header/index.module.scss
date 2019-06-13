@@ -1,6 +1,8 @@
+@import '../../styles/variables';
+
 .header {
-    background-color: rebeccapurple;
-    padding: 1.45rem 1.0875rem;
+    background-color: $header;
+    border-top: 8px solid #8f2d56;
 }
 
 .header__title {

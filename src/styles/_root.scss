@@ -18,8 +18,15 @@ details {
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 4.5rem;
+    margin: 0.37em 0;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 body,
@@ -30,6 +37,11 @@ optgroup,
 select,
 textarea {
     margin: 0;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
 hr {

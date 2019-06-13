@@ -1,0 +1,20 @@
+.projects_container {
+  margin-top: 30px;
+  margin-bottom: 200px;
+  background-color: linear-gradient(-45deg, #fff 10%, #d3d0d0);
+  
+}
+
+
+.projects {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 77%;
+}
+
+.projects_cards_container {
+  display: grid;
+  grid-template-columns: 35% 35%;
+  grid-gap: 8%;
+
+}
