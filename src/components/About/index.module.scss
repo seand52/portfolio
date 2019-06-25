@@ -1,21 +1,49 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .about_container {
-  margin-top: 190px;
-  background-color: linear-gradient(-45deg, #fff 10%, #d3d0d0);
+  margin-top: 280px;
+  background-image: linear-gradient(-45deg,#fff 10%,#f4f4f4);
+  z-index: -2;
+  min-height: 720px;
   position: relative;
+  flex: 1 0 auto;
 
+  @include mobile-or-less {
+    margin-top: 40px;
+  }
+
+}
+
+.parallax_container {
+  z-index: 3;
 }
 
 .about_section {
   max-width: 1300px;
   margin: 0 auto;
   width: 68%;
+
+  @include mobile-or-less {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
 }
 
 .skills_icons_container {
   display: flex;
   justify-content: space-evenly;
+  @include mobile-or-less {
+    width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-row-gap: 37px;
+  }
 }
 
 .icon {
@@ -40,14 +68,21 @@
   }
 }
 
+.transform {
+  position: absolute;
+  top: 17%;
+  left: 14%;
+  z-index: -1;
+  transform: rotate(-14deg);
+}
 .shape {
   height: 420px;
   width: 420px;
-  background-color: red;
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  z-index: -1;
-  transform: rotate(-14deg);
   background-image: linear-gradient(135deg, #ffce75 10%, #ffbc42);
+}
+
+.background {
+  @include mobile-or-less {
+    display: none;
+  }
 }

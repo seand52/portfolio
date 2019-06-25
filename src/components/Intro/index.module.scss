@@ -1,48 +1,89 @@
+@import '../../styles/mixins';
+
 .intro {
   position: relative;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 169px auto 0 auto;
+  flex: 1 0 auto;
+
+  @include mobile-or-less {
+    margin-top: 50px;
+  }
 }
 
 .foreground {
-  width: 60%;
-  margin: 160px auto 30px auto;
+  width: 100%;
+  margin: 0px auto 30px auto;
   min-height: 200px;
   z-index: 3;
 
+&_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include mobile-or-less {
+    align-items: center
+  }
+}
+
+  @include mobile-or-less {
+  // padding: 40px;
+
+  }
+
+  &__title {
+    @include mobile-or-less {
+      text-align: center;
+    }
+  }
   &__description {
     background: linear-gradient(135deg, #ffce75 10%, #ffbc42);
     padding: 0.75rem 1rem 0.5rem;
+    @include mobile-or-less {
+      width: 75%;
+    }
   }
 }
 
 .background {
   width: 50%;
+  @include mobile-or-less {
+    display: none;
+  }
 }
 
 .background__shape {
   width: 400px;
   height: 400px;
   background-image: linear-gradient(135deg, #ef2d73 10%, #d81159);
+}
+.transform {
+  transform: rotate(-10deg);
   position: absolute;
   top: -68px;
-  right: 7%;
-  transform: rotate(-10deg);
+  right: -10%;
+  
   z-index: -1;
 }
-
 .icons_container {
   width: 50%;
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 
+  @include mobile-or-less {
+    width: 96%;
+    margin-top: 35px;
+  }
+
   & svg {
     font-size: 1.8rem;
   }
 }
 
+
 .icon {
+  cursor: pointer;
   &_twitter {
     color: #1da1f2;
   }

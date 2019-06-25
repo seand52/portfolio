@@ -35,7 +35,7 @@ class Layout extends React.Component<LayoutProps, {}> {
           const { children } = this.props;
 
           return (
-            <>
+            <div className="portfolio-wrapper">
               <Helmet
                 title={siteMetadata.title}
                 meta={[
@@ -59,7 +59,7 @@ class Layout extends React.Component<LayoutProps, {}> {
               > */}
               {children}
               {/* </div> */}
-            </>
+            </div>
           );
         }}
       />

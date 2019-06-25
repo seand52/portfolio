@@ -4,6 +4,7 @@ import styles from './indexPage.module.scss';
 import Intro from '../components/Intro/Intro';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
+import Footer from '../components/Footer/Footer';
 
 const IndexPage: React.FunctionComponent = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage: React.FunctionComponent = () => {
       <Intro />
       <About />
       <Projects />
+      <Footer />
     </Layout>
   );
 };

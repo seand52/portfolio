@@ -9,18 +9,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { useSpring, animated } from 'react-spring';
 
-const calc = (x: number, y: number) => [
+const calc = (x: number, y: number): number[] => [
   x - window.innerWidth / 2,
   y - window.innerHeight / 2,
 ];
-const trans1 = (x: number, y: number) =>
+const trans1 = (x: number, y: number): string =>
   `translate3d(${x / 10}px,${y / 10}px,0)`;
-const trans2 = (x: number, y: number) =>
-  `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
-const trans3 = (x: number, y: number) =>
-  `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
-const trans4 = (x: number, y: number) =>
-  `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
 
 const Intro: React.FunctionComponent = () => {
   const [props, set] = useSpring(() => ({
@@ -28,29 +22,61 @@ const Intro: React.FunctionComponent = () => {
     config: { mass: 10, tension: 550, friction: 140 },
   }));
 
-  // onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
   return (
     <article className={styles.intro}>
-      <div className={styles.foreground}>
-        <animated.div style={{ transform: props.xy.interpolate(trans1) }}>
-          <h1 className={styles.foreground__title}>Sean Daryanani</h1>
-          <p className={styles.foreground__description}>
-            I'm a Full Stack Developer that specialises in Javascript
-            technologies... for now!
-          </p>
-          <div className={styles.icons_container}>
-            <FontAwesomeIcon className={styles.icon_twitter} icon={faTwitter} />
-            <FontAwesomeIcon
-              className={styles.icon_linkedin}
-              icon={faLinkedinIn}
-            />
-            <FontAwesomeIcon className={styles.icon_github} icon={faGithub} />
-            <FontAwesomeIcon className={styles.icon_dev} icon={faDev} />
+      <div
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        className={styles.parallax_container}
+      >
+        <div className={styles.foreground}>
+          <div className={styles.foreground_content}>
+            <h1 className={styles.foreground__title}>Sean Daryanani</h1>
+            <p className={styles.foreground__description}>
+              I'm a Full Stack Developer that specialises in Javascript
+              technologies... for now!
+            </p>
+            <div className={styles.icons_container}>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/seandaryanani/"
+              >
+                <FontAwesomeIcon
+                  className={`${styles.icon_twitter} ${styles.icon}`}
+                  icon={faTwitter}
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/seandaryanani/"
+              >
+                <FontAwesomeIcon
+                  className={`${styles.icon_linkedin} ${styles.icon}`}
+                  icon={faLinkedinIn}
+                />
+              </a>
+              <a target="_blank" href="https://github.com/seand52">
+                <FontAwesomeIcon
+                  className={`${styles.icon_github} ${styles.icon}`}
+                  icon={faGithub}
+                />
+              </a>
+              <a target="_blank" href="https://dev.to/seand52">
+                <FontAwesomeIcon
+                  className={`${styles.icon_dev} ${styles.icon}`}
+                  icon={faDev}
+                />
+              </a>
+            </div>
           </div>
-        </animated.div>
-      </div>
-      <div className={styles.background}>
-        <div className={styles.background__shape} />
+        </div>
+        <div className={styles.background}>
+          <div className={styles.transform}>
+            <animated.div
+              style={{ transform: props.xy.interpolate(trans1) }}
+              className={styles.background__shape}
+            />
+          </div>
+        </div>
       </div>
     </article>
   );
