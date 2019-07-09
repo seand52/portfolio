@@ -1,6 +1,6 @@
 @import '../../styles/mixins';
 
-.projects_container {
+.projects {
   background-image: linear-gradient(145deg,#fff 10%,#fff1b9);
   padding-top: 50px;
   min-height: 1105px;
@@ -8,12 +8,15 @@
 }
 
 
-.projects {
+.projects_container {
   max-width: 1300px;
   margin: 0 auto;
   width: 77%;
   @include mobile-or-less {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -21,6 +24,7 @@
   display: grid;
   grid-template-columns: 35% 35%;
   grid-gap: 8%;
+  margin-bottom: 70px;
   
   @include mobile-or-less {
     display: flex;

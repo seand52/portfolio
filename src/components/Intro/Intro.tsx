@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './index.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -7,6 +7,8 @@ import {
   faGithub,
   faDev,
 } from '@fortawesome/free-brands-svg-icons';
+import quotes from './quotes';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useSpring, animated } from 'react-spring';
 
 const calc = (x: number, y: number): number[] => [
@@ -17,11 +19,16 @@ const trans1 = (x: number, y: number): string =>
   `translate3d(${x / 10}px,${y / 10}px,0)`;
 
 const Intro: React.FunctionComponent = () => {
+  const [quoteIndex, setQuoteIndex] = useState(0);
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
   }));
 
+  const newQuote: MouseEvent<HTMLParagraphElement> = () => {
+    const newNumber = Math.floor(Math.random() * quotes.length);
+    setQuoteIndex(newNumber);
+  };
   return (
     <article className={styles.intro}>
       <div
@@ -30,11 +37,28 @@ const Intro: React.FunctionComponent = () => {
       >
         <div className={styles.foreground}>
           <div className={styles.foreground_content}>
-            <h1 className={styles.foreground__title}>Sean Daryanani</h1>
-            <p className={styles.foreground__description}>
-              I'm a Full Stack Developer that specialises in Javascript
-              technologies... for now!
-            </p>
+            <h1 className={styles.foreground__title}>
+              <span>S</span>
+              <span>e</span>
+              <span>a</span>
+              <span>n</span> <span>D</span>
+              <span>a</span>
+              <span>r</span>
+              <span>y</span>
+              <span>a</span>
+              <span>n</span>
+              <span>a</span>
+              <span>n</span>
+              <span>i</span>
+            </h1>
+            <div className={styles.quote_container}>
+              <blockquote
+                // onClick={newQuote}
+                className={styles.foreground__description}
+              >
+                {quotes[quoteIndex]}
+              </blockquote>
+            </div>
             <div className={styles.icons_container}>
               <a
                 target="_blank"
@@ -60,10 +84,10 @@ const Intro: React.FunctionComponent = () => {
                   icon={faGithub}
                 />
               </a>
-              <a target="_blank" href="https://dev.to/seand52">
+              <a href="mailto:seand52@gmail.com">
                 <FontAwesomeIcon
                   className={`${styles.icon_dev} ${styles.icon}`}
-                  icon={faDev}
+                  icon={faEnvelope}
                 />
               </a>
             </div>

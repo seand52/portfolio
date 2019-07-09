@@ -70,7 +70,7 @@
 
 .transform {
   position: absolute;
-  top: 17%;
+  top: 14%;
   left: 14%;
   z-index: -1;
   transform: rotate(-14deg);
@@ -82,7 +82,15 @@
 }
 
 .background {
+  width: 50%;
   @include mobile-or-less {
     display: none;
   }
+}
+
+.about_me_text {
+  @include mobile-or-less{
+    text-align: justify;
+    hyphens: auto;
+  }  
 }

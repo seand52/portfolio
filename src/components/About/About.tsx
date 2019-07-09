@@ -4,7 +4,7 @@ import SubTitle from '../SubTitle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
-  faCss3,
+  faCss3Alt,
   faJs,
   faReact,
   faVuejs,
@@ -30,18 +30,18 @@ const About: React.FunctionComponent = () => {
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
         className={styles.parallax_container}
       >
-        <section className={`${styles.about} ${styles.about_section}`}>
-          <SubTitle text="About" />
-          <p>
-            I am a senior developer. I wrote my first line of code 5 years ago
-            when I was at college. Currently, I build Single Page Applications,
-            PHP Websites, and Admin panels with the help of Laravel Framework
-            and CSS/JavaScript bundlers like Webpack. My favorite JavaScript
-            Framework is Vue. I love the Internet and anything opensource.
+        <section className={styles.about_section}>
+          <SubTitle text="About Me" />
+          <p className={styles.about_me_text}>
+            I'm a Fullstack Developer based in Barcelona, Spain. Currently I
+            work building complete web applications with backend API Systems. I
+            work primarily with Javascript technologies, and despite trying to
+            stay framework agnostic, I have a soft spot for React! I love the
+            Internet and anything opensource.
           </p>
         </section>
-        <section className={`${styles.skills} ${styles.about_section}`}>
-          <SubTitle text="What I am good at" />
+        <section className={styles.about_section}>
+          <SubTitle text="Technologies I &hearts;" />
           <div className={styles.skills_icons_container}>
             <FontAwesomeIcon
               className={`${styles.icon_html} ${styles.icon}`}
@@ -49,7 +49,7 @@ const About: React.FunctionComponent = () => {
             />
             <FontAwesomeIcon
               className={`${styles.icon_css} ${styles.icon}`}
-              icon={faCss3}
+              icon={faCss3Alt}
             />
             <FontAwesomeIcon
               className={`${styles.icon_js} ${styles.icon}`}

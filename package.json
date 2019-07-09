@@ -35,6 +35,8 @@
     "react-dom": "*",
     "react-helmet": "*",
     "react-spring": "*",
+    "typeface-lato": "^0.0.54",
+    "typeface-roboto": "^0.0.54",
     "typescript": "*"
   },
   "devDependencies": {
