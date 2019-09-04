@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from '../components/Header';
 import './layout.scss';
+import favicon16 from '../images/favicon-16x16.png';
+import favicon32 from '../images/favicon-32x32.png';
 
 interface LayoutProps {
   className?: string;
@@ -31,34 +33,46 @@ class Layout extends React.Component<LayoutProps, {}> {
           }
         `}
         render={(data: StaticQueryProps) => {
-          const { siteMetadata } = data.site;
           const { children } = this.props;
 
           return (
             <div className="portfolio-wrapper">
               <Helmet
-                title={siteMetadata.title}
+                title="Sean Daryanani"
                 meta={[
                   {
                     name: 'description',
                     content: 'Gatsby TypeScript Boilerplate Starter',
                   },
-                  { name: 'keywords', content: 'Gatsby, TypeScript, Starter' },
+                  {
+                    name: 'keywords',
+                    content: [
+                      'Professional Web Developer Barcelona',
+                      'Web Design Solutions',
+                      'Developer',
+                      'Javascript',
+                    ],
+                  },
+                ]}
+                link={[
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '16x16',
+                    href: `${favicon16}`,
+                  },
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '32x32',
+                    href: `${favicon32}`,
+                  },
                 ]}
               >
                 <html lang="en" />
               </Helmet>
               <Header />
-              {/* <div
-                style={{
-                  margin: '0 auto',
-                  maxWidth: 1300,
-                  padding: '0px 1.0875rem 1.45rem',
-                  paddingTop: 0,
-                }}
-              > */}
               {children}
-              {/* </div> */}
             </div>
           );
         }}
