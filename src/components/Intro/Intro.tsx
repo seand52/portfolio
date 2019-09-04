@@ -37,25 +37,9 @@ const Intro: React.FunctionComponent = () => {
       >
         <div className={styles.foreground}>
           <div className={styles.foreground_content}>
-            <h1 className={styles.foreground__title}>
-              <span>S</span>
-              <span>e</span>
-              <span>a</span>
-              <span>n</span> <span>D</span>
-              <span>a</span>
-              <span>r</span>
-              <span>y</span>
-              <span>a</span>
-              <span>n</span>
-              <span>a</span>
-              <span>n</span>
-              <span>i</span>
-            </h1>
+            <h1 className={styles.foreground__title}>Sean Daryanani</h1>
             <div className={styles.quote_container}>
-              <blockquote
-                // onClick={newQuote}
-                className={styles.foreground__description}
-              >
+              <blockquote className={styles.foreground__description}>
                 {quotes[quoteIndex]}
               </blockquote>
             </div>

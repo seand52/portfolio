@@ -29,6 +29,7 @@
     "gatsby-plugin-sharp": "*",
     "gatsby-plugin-sitemap": "*",
     "gatsby-plugin-typescript": "*",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "*",
     "gatsby-transformer-sharp": "*",
     "react": "*",

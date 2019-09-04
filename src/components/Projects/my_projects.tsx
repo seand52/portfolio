@@ -1,6 +1,7 @@
 interface InterfaceProjects {
   id: number;
   link: string;
+  repo_link: string;
   img?: string;
   title: string;
   subTitle: string;
@@ -10,27 +11,29 @@ interface InterfaceProjects {
 const projects: InterfaceProjects[] = [
   {
     id: 1,
-    link: 'http://google.com',
-    title: 'Project 1',
-    subTitle: 'Project 1 Subtitle',
+    link: ' https://github.com/seand52/Telegram_football_bot',
+    repo_link: 'https://github.com/seand52/Telegram_football_bot',
+    title: 'Football Reporter Bot',
+    subTitle: 'Never miss another match!',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem',
+      'This bot retrieves the next game/s of your favourite Premier League/La Liga team!',
   },
   {
     id: 2,
-    link: 'http://google.com',
-    title: 'Project 2',
-    subTitle: 'Project 2 Subtitle',
+    link: 'https://bright-process.surge.sh/#/',
+    repo_link: 'https://github.com/seand52/whatsapp-data',
+    title: 'Whatsapp Analysis',
+    subTitle: 'Visualise Whatsapp chat data',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem',
+      'View interesting data about your group chats and show your friends!',
   },
   {
     id: 3,
-    link: 'http://google.com',
-    title: 'Project 3',
-    subTitle: 'Project 3 Subtitle',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem',
+    link: 'https://ultra-road.surge.sh',
+    repo_link: 'https://github.com/seand52/Book-Shop',
+    title: 'Book store',
+    subTitle: 'Simple book store app',
+    description: 'CRUD app made with Golang API and React (Redux)',
   },
 ];
 

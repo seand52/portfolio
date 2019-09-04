@@ -7,6 +7,7 @@ import {
   faCss3Alt,
   faJs,
   faReact,
+  faNodeJs,
   faVuejs,
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
@@ -34,10 +35,16 @@ const About: React.FunctionComponent = () => {
           <SubTitle text="About Me" />
           <p className={styles.about_me_text}>
             I'm a Fullstack Developer based in Barcelona, Spain. Currently I
-            work building complete web applications with backend API Systems. I
-            work primarily with Javascript technologies, and despite trying to
-            stay framework agnostic, I have a soft spot for React! I love the
-            Internet and anything opensource.
+            work building complete web applications with{' '}
+            <span className={styles.highlight_one}>backend API Systems</span>. I
+            work primarily with{' '}
+            <span className={styles.highlight_two}>
+              Javascript technologies
+            </span>
+            , and despite trying to stay framework agnostic, I have a soft spot
+            for <span className={styles.highlight_three}>React</span>! I love
+            the Internet and anything{' '}
+            <span className={styles.highlight_four}>opensource</span>.
           </p>
         </section>
         <section className={styles.about_section}>

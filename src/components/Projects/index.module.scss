@@ -26,6 +26,9 @@
   grid-gap: 8%;
   margin-bottom: 70px;
   
+  @include between-tablet-and-mobile {
+    grid-template-columns: 45% 45%;
+  }
   @include mobile-or-less {
     display: flex;
     flex-direction: column;
