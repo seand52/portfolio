@@ -20,7 +20,7 @@ const projects: InterfaceProjects[] = [
   },
   {
     id: 2,
-    link: 'https://bright-process.surge.sh/#/',
+    link: 'https://vigorous-roentgen-11585f.netlify.com',
     repo_link: 'https://github.com/seand52/whatsapp-data',
     title: 'Whatsapp Analysis',
     subTitle: 'Visualise Whatsapp chat data',
