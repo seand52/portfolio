@@ -58,17 +58,18 @@ const About: React.FunctionComponent = () => {
               className={`${styles.icon_css} ${styles.icon}`}
               icon={faCss3Alt}
             />
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               className={`${styles.icon_js} ${styles.icon}`}
               icon={faJs}
-            />
+            /> */}
+            <img src="typescript.png" />
             <FontAwesomeIcon
               className={`${styles.icon_react} ${styles.icon}`}
               icon={faReact}
             />
             <FontAwesomeIcon
               className={`${styles.icon_vue} ${styles.icon}`}
-              icon={faVuejs}
+              icon={faNodeJs}
             />
             <FontAwesomeIcon
               className={`${styles.icon_db} ${styles.icon}`}

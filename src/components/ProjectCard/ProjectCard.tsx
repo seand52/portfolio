@@ -29,7 +29,7 @@ const ProjectCard: React.FunctionComponent = ({
       </a>
       <a target="_blank" href={project.link}>
         <div className={styles.card__image}>
-          <img src="https://abdalla.js.org/images/bun.png" />
+          <img src="codolog.png" />
         </div>
         <div className={styles.card__content}>
           <h3 className={styles.content__title}>{project.title}</h3>

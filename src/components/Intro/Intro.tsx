@@ -49,15 +49,6 @@ const Intro: React.FunctionComponent = () => {
                 href="https://www.linkedin.com/in/seandaryanani/"
               >
                 <FontAwesomeIcon
-                  className={`${styles.icon_twitter} ${styles.icon}`}
-                  icon={faTwitter}
-                />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/seandaryanani/"
-              >
-                <FontAwesomeIcon
                   className={`${styles.icon_linkedin} ${styles.icon}`}
                   icon={faLinkedinIn}
                 />
@@ -72,6 +63,12 @@ const Intro: React.FunctionComponent = () => {
                 <FontAwesomeIcon
                   className={`${styles.icon_dev} ${styles.icon}`}
                   icon={faEnvelope}
+                />
+              </a>
+              <a href="cv.pdf" download={true}>
+                <img
+                  className={`${styles.icon_twitter} ${styles.icon}`}
+                  src="cv_icon.png"
                 />
               </a>
             </div>
